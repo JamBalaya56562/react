@@ -1403,7 +1403,7 @@ function updateFunctionComponent(
 
     if (current === null) {
       // Some validations were previously done in mountIndeterminateComponent however and are now run
-      // in updateFuntionComponent but only on mount
+      // in updateFunctionComponent but only on mount
       validateFunctionComponentInDev(workInProgress, workInProgress.type);
 
       if (Component.contextTypes) {
@@ -1925,7 +1925,7 @@ function updateHostComponent(
     );
 
     // If the transition state changed, propagate the change to all the
-    // descendents. We use Context as an implementation detail for this.
+    // descendants. We use Context as an implementation detail for this.
     //
     // This is intentionally set here instead of pushHostContext because
     // pushHostContext gets called before we process the state hook, to avoid
@@ -1990,7 +1990,7 @@ function updateHostHoistable(
   // the host implementation of getResource to consider children in the
   // resource construction but they will otherwise be discarded. In practice
   // this precludes all but the simplest children and Host specific warnings
-  // should be implemented to warn when children are passsed when otherwise not
+  // should be implemented to warn when children are passed when otherwise not
   // expected
   return null;
 }
@@ -3208,7 +3208,7 @@ function validateRevealOrder(revealOrder: SuspenseListRevealOrder) {
       if (revealOrder == null) {
         console.error(
           'The default for the <SuspenseList revealOrder="..."> prop is changing. ' +
-            'To be future compatible you must explictly specify either ' +
+            'To be future compatible you must explicitly specify either ' +
             '"independent" (the current default), "together", "forwards" or "legacy_unstable-backwards".',
         );
       } else if (revealOrder === 'backwards') {
@@ -3275,7 +3275,7 @@ function validateTailOptions(
           didWarnAboutTailOptions[cacheKey] = true;
           console.error(
             'The default for the <SuspenseList tail="..."> prop is changing. ' +
-              'To be future compatible you must explictly specify either ' +
+              'To be future compatible you must explicitly specify either ' +
               '"visible" (the current default), "collapsed" or "hidden".',
           );
         }
@@ -4113,7 +4113,7 @@ function beginWork(
     didReceiveUpdate = false;
 
     if (getIsHydrating() && isForkedChild(workInProgress)) {
-      // Check if this child belongs to a list of muliple children in
+      // Check if this child belongs to a list of multiple children in
       // its parent.
       //
       // In a true multi-threaded implementation, we would render children on
